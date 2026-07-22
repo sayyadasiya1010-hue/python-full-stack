@@ -1,0 +1,133 @@
+1)a=int(input(""))
+b=int(input(""))
+c=int(input(""))
+total=a+b+c
+print("total =",total)
+avg=total/3
+print("average =",avg)
+if avg>=40:
+    print("pass")
+else:
+    print("fail")
+
+2)n=int(input(""))
+
+if n<=100:
+    bill=n*5
+elif n<=200:
+    bill=(100*5)+((n-100)*7)
+else:
+    bill=(100*5)+(100*7)+((n-200)*10)
+print("total bill",bill)
+
+3)balance=10000
+withdraw=int(input(""))
+if withdraw >balance:
+    print("insufficient balance")
+else:
+    print("balance",balance-withdraw)
+
+4)a=int(input(""))
+b=int(input(""))
+c=int(input(""))
+total=a+b+c
+avg=total/3
+print("average",avg)
+if avg >=90 and avg<=100:
+    print("grade A")
+elif avg>=75 and avg<90:
+    print("grade B")
+elif avg>=60 and avg<75:
+    print("grade C")
+elif avg>=40 and avg<60:
+    print("grade D")
+else:
+    print("fail")
+
+5)a=int(input(""))
+c=0
+while a>0:
+    b=a%10
+    c=c*10+b
+    a=a//10
+print(c)
+
+6)a = (input(""))
+even= 0
+odd= 0
+count=0
+
+for i in a:
+    count=count+1
+    if int(i) % 2 == 0:
+        even = even + 1
+    else:
+        odd = odd + 1
+print("digits:=",count)
+print("Even digits:", even)
+print("Odd digits:", odd)
+
+7)username = input("")
+password = int(input(""))
+
+if username == "admin" and password == 1234:
+    print("successful")
+else:
+    print("unsuccessful")
+
+8)n=int(input(""))
+if n==25:
+    print("correct")
+elif n>25:
+    print("too high")
+else:
+    print("too low")
+
+9)product=input("")
+quantity=int(input(""))
+price=int(input(""))
+total=quantity*price
+if total>=5000:
+    discount=int(input(""))
+    discount=total*discount//100
+    print("total:",total)
+    print("discount:",discount)
+    print("final amount:",total-discount)
+else:
+    print("final amount",total)
+
+10)balance=5000
+while True:
+    choice=int(input("enter the choice:"))
+    if choice==1:
+        print("check balance:",balance)
+    elif choice==2:
+        deposit=int(input(""))
+        balance=balance+deposit
+        print("balance:",balance)
+    elif choice==3:
+        print("enter withdraw amount:")
+        withdraw=int(input(""))
+        balance=balance-withdraw
+        print("balance:",balance)
+    else:
+        print("insuffient balance")
+
+11)a=int(input(""))
+original=a
+c=0
+while a>0:
+    b=a%10
+    c=c*10+b
+    a=a//10
+print(c)
+if c==original:
+    print("it is a palindrome")
+else:
+    print("it is not a palindrome")      
+
+12)n=int(input(""))
+if n%400==0|(n%4==0 & n%100!=0):
+    print("it is a leap year")
+else:
+    print("it is a not leap year")
