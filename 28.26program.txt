@@ -1,0 +1,200 @@
+1)
+class student:
+    def __init__(self,name,age):
+       self.Name = name
+       self.Age =age
+       self.course = course
+    def display(self):
+        print(f,'Name:{self.name},Age:{self.age}')
+    def display(self):
+        print(f'{self.name} is studying(subject)
+s.display()
+s.study('python')
+
+2)
+
+class employee:
+    def __init__(self, name, id, salary, dept):
+        self.name = name
+        self.id = id
+        self.salary = salary
+        self.dept = dept
+
+    def display(self):
+        print(f'{self.name} is working')
+
+
+
+emp = employee("Alice", 101, 50000, "HR")
+emp.display()
+
+3)
+
+class circle:
+    pi=3.14
+    def __init__(self,radius):
+        self.radius = radius
+    def area(self):
+        return circle.pi * self.radius ** 2
+c= circle(5)
+print(c.area())   
+4)
+
+
+class triangle:
+    def __init__(self,b,h):
+        self.b = b
+        self.h = h
+    def area(self):
+        return 0.5*self.b*self. h
+t=triangle(10,20)
+print(t.area())   
+5)
+
+class circle:
+    pi = 3.14159  # Added the missing class attribute 'pi'
+
+    def __init__(self, radius):
+        self.radius = radius
+
+    @classmethod    
+    def info(cls):  
+        print('this area of the circle')
+
+    @classmethod
+    def change_pi(cls, new_pi): 
+        cls.pi = new_pi
+
+    def area(self):
+        return circle.pi * self.radius**2 
+
+
+c = circle(5)
+
+
+circle.info()  
+
+
+print("Area:", c.area())   
+6)
+
+
+class parent:
+    def display(self):
+        print("this is a parent class")
+class child(parent):
+    def show(self):
+        print("this is a child class")
+obj = child()
+obj.display()
+obj.show()             
+
+7)
+class father:
+    def display(self):
+        print("this is a parent class")
+
+class mother(father):
+    def display2(self):
+        print("this is a child class")
+
+class child(mother):
+    def show(self):
+        print("this is multilevel inheritance")
+
+obj = child()
+obj.display()
+obj.display2()  
+obj.show()      
+
+8)
+
+class product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def display(self):
+        print(f'product: {self.name}')   
+        print(f'price: {self.price}')
+
+class clothing(product):
+    def __init__(self, name, price, warranty):
+        super().__init__(name, price) 
+        self.warranty = warranty
+
+    def display(self):
+        super().display() 
+        print(f'warranty: {self.warranty} years')
+
+c = clothing('shirt', 2000, 1)
+c.display()  
+9)
+class call:
+    def calling(self):
+        print("calling....")
+class capture:
+    def capturing(self):
+        print("capturing image....")
+
+class brand(call,capture):
+    def __init__(self,smartphone):
+        self. smartphone = smartphone 
+    def display(self):
+        print(f'brand :{self.smartphone}')
+obj=brand('iphone')
+obj.display()
+obj.capturing()
+obj.calling()              
+10)
+class student:
+    def __init__(self):
+        self . name="name"
+        self.__age = 12
+    def display(self):
+        print('age',self.__age)
+s = student()
+print(s.name)
+s.display()            
+11)
+class bank:
+    def __init__(self,name,balance):
+        self.name =name
+        self.__balance = balance
+    def deposite(self,amount):
+        if amount >0 :
+            self.__balance += amount
+    def withdraw(self,amount):
+        if amount > self.__balance:
+            print("insufficient balance")
+
+        else:
+            self.__balance -=amount
+    def get_balance(self) :
+        return self.__balance
+acc=bank("name",1000)
+acc.deposite(5000)
+acc.withdraw(1000)
+print(acc.get_balance())   
+12)  
+
+class Student:
+
+    def __init__(self, name, roll_no):
+        self.name = name
+        self.roll_no = roll_no
+
+    def display(self):
+        print(f"Name: {self.name}, Roll No: {self.roll_no}")
+
+    def display_name(self):
+        print(f"Name: {self.name}")
+
+    def display_roll_no(self):
+        print(f"Roll No: {self.roll_no}")
+
+
+
+s = Student("asiya", 101)
+s.display_name()
+s.display_roll_no()
