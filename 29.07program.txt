@@ -1,0 +1,233 @@
+1)
+   class animal:
+    def eat(self):
+        print("animal eat food")
+    def fly(self):
+       print("bird  can fly" )    
+
+    def speak(self):
+        print("parrot can speak")
+
+obj=animal()
+obj.eat()
+obj.fly()
+obj.speak()
+2)
+
+class photo:
+
+    def display1(self):
+        print("taking photo")
+
+
+class musicplayer:
+
+    def display2(self):  
+        print("playing music")
+
+
+
+class smartphones(photo, musicplayer):
+
+    def calling(self):  
+        print("calling....")
+
+
+
+obj = smartphones()
+obj.display1()  
+obj.display2()  
+obj.calling()  
+3)
+class student():
+    def __init__(self,name,marks):
+        self.name=name
+        self.marks=marks
+    def display(self):
+        print(f'name:{self.name}')
+        print(f'marks:{self.marks}')
+obj=student('asiya',98)
+obj.display()
+4)
+class BankAccount:
+
+    def __init__(self, balance):
+        self.__balance = balance 
+
+    def show_balance(self):
+        print(f"balance: {self.__balance}")
+
+
+
+account = BankAccount(5000)
+account.show_balance()
+5)
+class Wallet:
+
+    def __init__(self, money):
+        self.__money = money  
+
+    def deposit(self, amount):
+        self.__money += amount  
+
+    def show_money(self):  
+        print(f"available money: {self.__money}")
+
+obj = Wallet(1000)
+obj.deposit(500)
+obj.show_money()
+
+6)
+class Book:
+
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+        self.is_available = True
+
+    def borrow_book(self):
+        if self.is_available:
+            self.is_available = False
+            print(f"title:{self.title}")
+            print(f"author:{self.author}")
+            print("book borrowed sucessfully")
+        else:
+            print("book not available")
+
+
+
+b1 = Book("python programming", "abc")
+
+
+b1.borrow_book()
+b1.borrow_book()
+7)
+class Animal:
+
+    def sound(self):
+        print("animal sounds")
+
+
+class Dog(Animal):
+
+    def sound(self):
+        print("bark")
+
+
+class Cat(Animal):
+
+    def sound(self):
+        print("meow")
+        
+
+
+
+d = Dog()
+c = Cat()
+
+
+d.sound()
+c.sound()
+8)
+class Dog:
+
+    def sound(self):
+        print("bark")
+
+
+class Cat:
+
+    def sound(self):
+        print("meow")
+
+
+def make_sound(animal):
+    animal.sound()
+
+make_sound(Dog())
+make_sound(Cat())
+9)
+class cal:
+    def add (self,a,b,c=0):
+        return a+b+c
+obj =cal()
+print(obj.add(10,20))
+10)
+class cal:
+    def add(self,a,b,c=0,d=0):
+        return a+b+c+d
+obj =cal()
+print(obj.add(10,20,30,40))
+11)
+from abc import ABC, abstractmethod
+
+
+class Shape(ABC):
+
+    @abstractmethod
+    def area(self):
+        pass
+
+
+class Rectangle(Shape):
+
+    def __init__(self, l, b):
+        self.l = l  
+        self.b = b
+
+    def area(self):
+        print(self.l * self.b)
+
+
+obj = Rectangle(10, 5)
+obj.area()
+12)
+
+
+class Shape():#without abstrat method 
+
+    
+    def area(self):
+        pass
+
+
+class Rectangle(Shape):
+
+    def __init__(self, l, b):
+        self.l = l  
+        self.b = b
+
+    def area(self):
+        print(self.l * self.b)
+
+
+obj = Rectangle(10, 5)
+obj.area()
+13)
+def add(a,b):
+    return a+b
+
+def multiple(a,b):
+    return a*b
+    14)
+
+import  os
+print(os.getcwd)
+print(os.listdir)
+print(os.mkdir('new folder'))
+15)
+import  sys
+print(sys.path)
+print(os.listdir)
+print(os.mkdir('new folder'))
+16)
+from datetime import datetime,date,timedelta
+now = datetime.now()
+print(now.year,now.month,now.day)
+print(now.strftime('%H : %M : %S'))
+today=date.today()
+print(today)
+tomorrow = today + timedelta(days = 3)
+print(tomorrow)
+diff = datetime(2025,1,1) - datetime.now()
+print(diff)
