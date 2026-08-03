@@ -1,0 +1,47 @@
+def add(a,b):
+    return a+b
+def sub(a,b):
+    return a-b
+def mul(a,b):
+    return a*b
+def divide(a,b):
+    if b==0:
+        return "cannod divide by zero"
+    return a/b
+def modulus(a,b):
+    if b==0:
+            return "cannod divide by zero"
+    return a%b
+def power(a,b):
+    return a**b
+while True:
+    print("1.addition")
+    print("2.subtraction")
+    print("3.multiplication")
+    print("4.division")
+    print("5.modulus")
+    print("6.power")
+    print("7.exit")
+    
+    choice=int(input("enter the choice:"))
+    num1=float(input("enter the first number:"))
+    num2=float(input("enter the second number:"))
+
+    if choice==7:
+        print("calculator closed")
+        break
+    if choice < 1 or choice > 7:
+        print("invalid input")
+        continue
+    if choice==1:
+        print("result:",add(num1,num2))
+    elif choice==2:
+            print("result:",sub(num1,num2))
+    elif choice==3:
+                print("result:",mul(num1,num2))
+    elif choice==4:
+                print("result:",divide(num1,num2))
+    elif choice==5:
+                print("result:",modulus(num1,num2))
+    elif choice==6:
+                print("result:",power(num1,num2))
